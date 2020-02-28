@@ -140,6 +140,17 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+
+// Why is this not working? Why do I have to push?
+// var results = []
+// results = zooAnimals.forEach(function cb(elementor){
+//   return `Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}`
+// }) 
+
+zooAnimals.forEach(function cb(elementor){
+  displayNames.push( `Name: ${elementor.animal_name}, Scientific: ${elementor.scientific_name}`)
+})
+
 console.log(displayNames);
 
 /* Request 2: .map()
