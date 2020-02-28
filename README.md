@@ -34,7 +34,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
-# location. A method is just a function associated with an object
+# location. A method is just a function associated with an object. Objects have methods. Hear object, think method. Otherwise function. 
 
 3. What is closure?
 
@@ -42,13 +42,15 @@ Edit this document to include your answers after each question. Make sure to lea
 
 4. Describe the four rules of the 'this' keyword.
 
-# "This" gets its meaning from context. It is dependent on binding. 1) There is global binding, in which when not in strict mode it references/returns the Window object- the biggest top level object of all. In strict mode it is undefined. 
+# "This" gets its meaning from context. It is dependent on binding. 
+
+# 1) There is global binding, in which when not in strict mode it references/returns the Window object- the biggest top level object of all. In strict mode it is undefined. 
 # 2) there is the implicit binding, where this binds to the object that it is called from. For example if we create an 'animal' class and reference this.name, we are refering to the name arg we passed the animal
 # 3) there is explicit binding, where we use the call or apply funciton to specify what it refers to- e.g. an external function or object
-# 4) there is the 
+# 4) New binding meants it binds to the new object created. If you have a class or function and you create a new instance, with the "new" keyword, which calls the constructor method, then 'this' refers to the new object and so you can access its properties. 
 
 5. Why do we need super() in an extended class?
-# we need to tell the extended class to inherit its arguments/properties from the parent. It is how we link the properties. 
+# We need to tell the extended class to inherit its arguments/properties from the parent. It is how we link the properties. The super function calls the parents contructor with the arguments passed into it, as individual args or as an array. 
 
 ## Project Set up
 
