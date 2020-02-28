@@ -141,11 +141,12 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = [];
 
-// Why is this not working? Why do I have to push?
+// Why is this not working? Why do I have to push? (undefined value in log)
 // var results = []
 // results = zooAnimals.forEach(function cb(elementor){
-//   return `Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}`
+//   return `Name: ${elementor.animal_name}, Scientific: ${elementor.scientific_name}`
 // }) 
+// console.log(results)
 
 zooAnimals.forEach(function cb(elementor){
   displayNames.push( `Name: ${elementor.animal_name}, Scientific: ${elementor.scientific_name}`)
@@ -159,7 +160,11 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = [];
+const lowCaseAnimalNames = zooAnimals.map(function cb(el){
+  return el.animal_name.toLowerCase()
+})
+
+
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
