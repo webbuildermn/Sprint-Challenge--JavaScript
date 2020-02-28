@@ -26,6 +26,9 @@ function multiply (a,b)
 {return a*b};
 console.log(consume(1,7,add))
 console.log(consume(8,8,multiply))
+function greeting (fname,lname)
+{return `Hello ${fname} ${lname}`};
+console.log(consume("Gerald","Ryan",greeting))
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // console.log(consume(2, 2, add)); // 4
